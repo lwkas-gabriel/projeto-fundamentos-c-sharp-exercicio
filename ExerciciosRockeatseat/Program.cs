@@ -7,7 +7,12 @@ namespace ExerciciosRocketseat
     {
         public static void Main()
         {
-            Exercicio4();
+            //Exercicio1();
+            //Exercicio2();
+            //Exercicio3();
+            //Exercicio4();
+            //Exercicio5();
+            //Exercicio6();
         }
 
         public static void Exercicio1()
