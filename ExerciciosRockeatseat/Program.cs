@@ -7,7 +7,7 @@ namespace ExerciciosRocketseat
     {
         public static void Main()
         {
-            Exercicio2();
+            Exercicio4();
         }
 
         public static void Exercicio1()
@@ -25,7 +25,41 @@ namespace ExerciciosRocketseat
             string sobrenome = Console.ReadLine();
 
             Console.WriteLine($"{nome} {sobrenome}");
+        }
 
+        public static void Exercicio3()
+        {
+            double primeiroFator ;
+            double segundoFator;
+
+            Console.WriteLine("Digite o primeiro fator:");
+            primeiroFator = Convert.ToDouble(Console.ReadLine());
+            do
+            {
+                Console.WriteLine("Digite o segundo fator:");
+                segundoFator = Convert.ToDouble(Console.ReadLine());
+                if (segundoFator == 0)
+                {
+                    Console.WriteLine("Por favor, insira um número diferante de zero!");
+                }
+            } while (segundoFator == 0);
+            
+
+            Console.WriteLine($"A soma dos números é: {primeiroFator + segundoFator}");
+            Console.WriteLine($"A subtração dos números é: {primeiroFator - segundoFator}");
+            Console.WriteLine($"A multiplicação dos números é: { primeiroFator * segundoFator}");
+            Console.WriteLine($"A divisão dos números é: { primeiroFator / segundoFator }");
+            Console.WriteLine($"A média dos números é:{ (primeiroFator+segundoFator) / 2 }");
+        }
+
+        public static void Exercicio4()
+        {
+            //Retirei os espaços vazios da frase - Caso seja frase
+            Console.WriteLine("Digite sua string:");
+            string fraseOuPalavra = Console.ReadLine();
+            string fraseOuPalavraSemEspacos = fraseOuPalavra.Replace(" ", "");
+
+            Console.WriteLine($"{fraseOuPalavra} tem {fraseOuPalavraSemEspacos.Count()} letras");
         }
     }
 }
