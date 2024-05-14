@@ -11,8 +11,8 @@ namespace ExerciciosRocketseat
             //Exercicio2();
             //Exercicio3();
             //Exercicio4();
-            Exercicio5();
-            //Exercicio6();
+            //Exercicio5();
+            Exercicio6();
 
         }
 
@@ -101,6 +101,19 @@ namespace ExerciciosRocketseat
             {
                 Console.WriteLine($"Entrada Inválida! A placa informada possui {placaCarro.Length} digitos!");
             }
+        }
+
+        public static void Exercicio6()
+        {
+            DateTime agora = DateTime.Now;
+
+            Console.WriteLine(agora.ToString());
+            //Apenas a data.
+            Console.WriteLine(agora.ToString("MM/dd/yyyy"));
+            //Apenas a hora com AM/PM.
+            Console.WriteLine(agora.ToString("hh:mm tt"));
+            //Apena a data com o mês por extenso.
+            Console.WriteLine(agora.ToString("dd MMMM yyyy"));
         }
     }
 }
