@@ -11,8 +11,9 @@ namespace ExerciciosRocketseat
             //Exercicio2();
             //Exercicio3();
             //Exercicio4();
-            //Exercicio5();
+            Exercicio5();
             //Exercicio6();
+
         }
 
         public static void Exercicio1()
@@ -65,6 +66,41 @@ namespace ExerciciosRocketseat
             string fraseOuPalavraSemEspacos = fraseOuPalavra.Replace(" ", "");
 
             Console.WriteLine($"{fraseOuPalavra} tem {fraseOuPalavraSemEspacos.Count()} letras");
+        }
+
+        public static void Exercicio5()
+        {
+            Console.WriteLine("Digite o número da sua placa:");
+            string placaCarro = Console.ReadLine();
+            int contador = 0;
+
+            if (placaCarro.Length == 7)
+            {
+                for (int i = 0; i < placaCarro.Length; i++)
+                {
+                    if (Char.IsLetter(placaCarro[i]) || Char.IsNumber(placaCarro[i]))
+                    {
+                        if (Char.IsLetter(placaCarro[0]) && Char.IsLetter(placaCarro[1]) && Char.IsLetter(placaCarro[2]))
+                        {
+                            contador++;
+                        }
+                        else if (Char.IsNumber(placaCarro[3]) && Char.IsNumber(placaCarro[4]) && Char.IsNumber(placaCarro[5]) && Char.IsNumber(placaCarro[6]))
+                        {
+                            contador++;
+                        }
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                string resultado = contador == 7 ? "Verdadeiro" : "Falso";
+                Console.WriteLine(resultado);
+            }
+            else
+            {
+                Console.WriteLine($"Entrada Inválida! A placa informada possui {placaCarro.Length} digitos!");
+            }
         }
     }
 }
